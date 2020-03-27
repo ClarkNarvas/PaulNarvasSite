@@ -2,6 +2,7 @@ body {
   background-color: #0d0d0d;
   color: white;
   font-family: CenturyGothic;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -14,8 +15,11 @@ body {
   src: url(assets/fonts/gothicb.ttf);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 
+  #one {
+    width: 100% !important;
+  }
   .frontbox {
     margin-left: 0 !important;
     padding: 15px !important;
@@ -28,6 +32,7 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 #one {
+  width: 100%;
   height: 100vh;
   background-image: url("assets/images/one.jpeg");
   color: white;
@@ -91,6 +96,11 @@ h1 {
   line-height: 0;
 }
 
+#smallscript {
+  font-size: 20% !important;
+  display: inline;
+  font-family: CenturyGothic;
+}
 .font-r {
   font-family: CenturyGothic;
 }
@@ -101,6 +111,17 @@ h1 {
 h2 {
   font-family: CenturyGothicB;
   line-height: 0;
+}
+
+#footerlink {
+  color: white;
+  font-family: CenturyGothic;
+  font-size: 170%;
+  text-decoration: underline grey;
+}
+
+#footerlink:hover {
+  text-decoration: underline white;
 }
 
 h3 {
@@ -134,9 +155,8 @@ h3 {
 
 .frontbox {
   margin-left: 30px;
-  opacity: 0;
-  padding: 50px;
-  width: 500px;
+  padding-left: 50px;
+  width: 850px;
   animation-name: scalething;
   animation-duration: 1s;
   animation-delay: 1s;
