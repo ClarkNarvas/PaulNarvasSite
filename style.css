@@ -21,7 +21,7 @@ body {
   .frontbox {
     margin-left: 0 !important;
     padding: 15px !important;
-    width: 300px;
+    width: 300px !important;
   }
   h1#sitetitle {
     font-size: 450% !important;
