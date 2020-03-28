@@ -21,7 +21,7 @@ body {
   .frontbox {
     margin-left: 0 !important;
     padding: 15px !important;
-    width: 300px !important;
+    width: 100% !important;
   }
   h1#sitetitle {
     font-size: 450% !important;
@@ -98,6 +98,7 @@ h1 {
   font-size: 20% !important;
   display: inline;
   font-family: CenturyGothic;
+  white-space: nowrap;
 }
 .font-r {
   font-family: CenturyGothic;
