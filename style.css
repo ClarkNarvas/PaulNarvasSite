@@ -1,8 +1,9 @@
 body {
-  background-color: #0d0d0d;
+  background-color: #252531;
   color: white;
   font-family: CenturyGothic;
   overflow-x: hidden;
+  z-index: -10;
 }
 
 @font-face {
@@ -26,13 +27,31 @@ body {
   h1#sitetitle {
     font-size: 450% !important;
   }
+
+  .sidenav-trigger {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 15px !important;
+    margin: 0 !important;
+  }
+}
+
+
+::selection {
+  background: #58FAF4;
+  color: black;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
+style.fixed-height {
+  width: 500px;
+}
 #one {
   height: 100vh;
-  background-image: url("assets/images/one.jpeg");
+  background-image: url("assets/images/background.png");
   color: white;
   display: flex;
   flex-direction: column;
@@ -42,21 +61,50 @@ body {
   background-size: cover;
 }
 
+#two {
+  text-align: center;
+  height: 100vh;
+  background-image: url("assets/images/background.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.texthighlight {
+  background-color: #26a69a;
+  border-radius:2px;
+}
+.grey-round-box {
+  background-color: #4f4f65;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.frontbox-center {
+
+}
+
+
 .sidenav-trigger {
   margin: 2%;
-  padding-left: 12px;
-  padding-right: 12px;
-  border-radius: 200%;
-  font-size: 250%;
-  background-color: grey;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 7px;
+  font-size: 150%;
+  background-color: #4f4f65;
   color: white;
   position: fixed;
-  z-index: 5;
+  z-index: 20;
   transition: linear 0.2s;
 }
 
 .sidenav-trigger:hover {
-  background-color: #2E2E2E;
+  background-color: #6F6F92;
   transition: linear 0.2s;
 
 }
@@ -94,11 +142,16 @@ h1 {
   line-height: 0;
 }
 
+.nopadding {
+  padding: 0;
+  margin: 0;
+}
 #smallscript {
   font-size: 20% !important;
   display: inline;
   font-family: CenturyGothic;
   white-space: nowrap;
+  color: #b4b4bd
 }
 .font-r {
   font-family: CenturyGothic;
@@ -112,6 +165,24 @@ h2 {
   line-height: 0;
 }
 
+.next-bar {
+  width: 100%;
+  height: 450px;
+  border-top: grey solid 1px;
+  color: white;
+  background: inherit;
+  overflow: hidden;
+}
+
+.next-bar-bg {
+  border-top: grey solid 1px;
+  background-image: url("assets/images/background.png");
+  overflow: hidden;
+  filter: blur(10px);
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+}
 #footerlink {
   color: white;
   font-family: CenturyGothic;
@@ -129,7 +200,7 @@ h3 {
 }
 
 .underline {
-  text-decoration: underline 5px grey;
+  border-bottom: 2px grey solid;
 
 }
 .header {
@@ -142,7 +213,11 @@ h3 {
 }
 #sitetitle {
   font-size: 900%;
-  color: white;
+  line-height: 1;
+}
+
+#sitetitle-two {
+  font-size: 600%;
   line-height: 1;
 }
 
@@ -150,9 +225,11 @@ h3 {
   margin: 0;
   padding: 0;
   font-size: 200%;
+  color: #b4b4bd;
 }
 
 .frontbox {
+  opacity: 0;
   margin-left: 30px;
   padding-left: 50px;
   width: 850px;
@@ -165,14 +242,92 @@ h3 {
 
 
 @keyframes scalething {
-  from {opacity: 0;}
-  to {opacity: 10;}
+  from {opacity: 0;padding-top: 100px;}
+  to {opacity: 10;padding-top: 0px;}
 }
 
-.card-stacked {
-  background-color: #2E2E2E;
+
+@keyframes sitefade {
+  from {opacity: 1; z-index: 10;}
+  to {opacity: 0;z-index: 20;}
 }
 
+
+a.no-decoration {
+  text-decoration: none;
+  color: white;
+}
+.p-card {
+  background-color: #252531 !important;
+}
+
+.center {
+  text-align: center;
+}
+.site-cover {
+  background-color: #252531;
+  z-index: -100;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  animation-name: sitefade;
+  animation-duration: 2s;
+}
+
+.p-card-img {
+  overflow: hidden;
+  object-fit: cover;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+}
+
+.cardportfolio {
+  background-color: RGBA(0,0,0,10) !important;
+  box-shadow: 0;
+  max-width: 300px;
+  max-height: 300px;
+}
+.card {
+  background-color: #4f4f65 !important;
+  border-radius: 10px !important;
+}
+
+.portfoliocard {
+  background-color: black;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: RGBA(38,29,62,0.5);
+}
+
+.portfoliocard:hover .portfolio-overlay{
+  opacity:1;
+}
+
+#footer {
+  background-color: rgba(0,0,0,0.3);
+}
+.portfoliocard h5 {
+  position: absolute;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
 p {
   font-family: 'Zilla Slab', serif;
   font-size: 120%;
