@@ -18,7 +18,9 @@ body {
 
 @media only screen and (max-width: 750px) {
 
-
+  #next-bar-arrow {
+    display: none;
+  }
   .frontbox {
     margin-left: 0 !important;
     padding: 15px !important;
@@ -28,6 +30,10 @@ body {
     font-size: 450% !important;
   }
 
+  .portfolio-overlay {
+    opacity: 1 !important;
+  }
+
   .sidenav-trigger {
     bottom: 0;
     left: 0;
@@ -35,19 +41,54 @@ body {
     text-align: center;
     padding: 15px !important;
     margin: 0 !important;
+
+
+  }
+
+  .materialboxed {
+    width: 90%;
+    height: auto;
+
+
+  }
+  #footer-left {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  #footer-right {
+    margin-top: 0px;
+    border-left: 0px !important;
+    border-top: 2px solid white;
+    width: 100% !important;
+    margin-bottom: 60px;
   }
 }
 
-
+.social {
+  width: 30px;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 10px;
+}
 ::selection {
   background: #58FAF4;
   color: black;
 }
 
+.materialboxed {
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 style.fixed-height {
   width: 500px;
+}
+
+.citation {
+  color: grey;
 }
 #one {
   height: 100vh;
@@ -61,6 +102,7 @@ style.fixed-height {
   background-size: cover;
 }
 
+
 #two {
   text-align: center;
   height: 100vh;
@@ -73,6 +115,11 @@ style.fixed-height {
   background-size: cover;
 }
 
+
+#three {
+  height: 300px;
+  background-color: #4f4f65;
+}
 .texthighlight {
   background-color: #26a69a;
   border-radius:2px;
@@ -87,6 +134,9 @@ style.fixed-height {
 
 }
 
+.portfolio-text {
+  font-size: 0%;
+}
 
 .sidenav-trigger {
   margin: 2%;
@@ -111,7 +161,7 @@ style.fixed-height {
 
 
 .sidenav {
-  background-color: #2E2E2E !important;
+  background-color: #252531 !important;
 }
 
 .sidenav a {
@@ -122,8 +172,12 @@ li.active a {
   font-family: CenturyGothicB;
 }
 
+.sidenav li:hover {
+  background-color: #6F6F92 !important;
+}
+
 li.active {
-  background-color: #585858 !important;
+  background-color: #4f4f65 !important;
 }
 
 li {
@@ -167,13 +221,28 @@ h2 {
 
 .next-bar {
   width: 100%;
-  height: 450px;
+  height: 250px;
   border-top: grey solid 1px;
   color: white;
-  background: inherit;
+  background-color: #4f4f65;
   overflow: hidden;
+  border-radius: 25px;
+  transition: ease 0.5s;
+  padding-top: 40px;
+  padding-left: 30px;
+  margin-bottom: 30px;
 }
 
+.next-bar:hover {
+  background-color: #8686B2;
+  transform: scale(1.05);
+  border-top: white solid 1px;
+}
+
+#next-bar-arrow {
+  font-size: 100px;
+  margin-top: 35px;
+}
 .next-bar-bg {
   border-top: grey solid 1px;
   background-image: url("assets/images/background.png");
@@ -191,9 +260,47 @@ h2 {
 }
 
 #footerlink:hover {
+  opacity: 0.5;
+}
+
+#footer-right {
+  text-align: center;
+  border-left: 2px solid white;
+  padding: 25px;
+}
+
+button {
+  font-family: 'Roboto', sans-serif !important;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px !important;
+  font-size: 130% !important;
+  background-color: inherit;
+  border: 2px white solid;
+  color: white;
+  transition: linear 0.1s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4f4f65;
+}
+#footerlink:hover {
   text-decoration: underline white;
 }
 
+.link {
+  color: white;
+  border-bottom: grey 1px solid;
+}
+
+.link-nodeco {
+  border-bottom: 0px !important;
+}
+
+.link:hover {
+  opacity: 0.5;
+}
 h3 {
   font-family: CenturyGothicB;
   line-height: 0;
@@ -240,7 +347,17 @@ h3 {
   filter: drop-shadow(0 0 0.75rem black);
 }
 
+.carousel {
+  height: 700px !important;
+}
 
+.carousel .carouselitem {
+  width: 230% !important;
+}
+
+.carousel .carouselitem img {
+  width: 430% !important;
+}
 @keyframes scalething {
   from {opacity: 0;padding-top: 100px;}
   to {opacity: 10;padding-top: 0px;}
@@ -256,6 +373,25 @@ h3 {
 a.no-decoration {
   text-decoration: none;
   color: white;
+}
+
+a.button {
+  text-decoration: none;
+  color: white;
+  background-color: #26a69a;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 150%;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-family: CenturyGothicB;
+  white-space: nowrap;
+  transition: ease 0.5s;
+
+}
+
+a.button:hover {
+  transform: scale(1.1)
 }
 .p-card {
   background-color: #252531 !important;
@@ -297,6 +433,18 @@ a.no-decoration {
   background-color: black;
 }
 
+.zoom {
+  transition: ease 0.5s !important;
+}
+
+.no-padding {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.zoom:hover {
+  transition: ease 0.5s;
+  transform: scale(1.1);
+}
 .portfolio-overlay {
   position: absolute;
   top: 0;
@@ -307,7 +455,7 @@ a.no-decoration {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: RGBA(38,29,62,0.5);
+  background-color: RGBA(38,29,62,0.7);
 }
 
 .portfoliocard:hover .portfolio-overlay{
@@ -316,7 +464,14 @@ a.no-decoration {
 
 #footer {
   background-color: rgba(0,0,0,0.3);
+  height: 25
+
+
+
+
 }
+
+
 .portfoliocard h5 {
   position: absolute;
   width: 200px;
@@ -329,11 +484,12 @@ a.no-decoration {
 
 }
 p {
-  font-family: 'Zilla Slab', serif;
+  font-family: 'Roboto', serif;
   font-size: 120%;
 }
 
 @keyframes fade {
   from {opacity: 0;}
   to {opacity: 10;}
+}
 }

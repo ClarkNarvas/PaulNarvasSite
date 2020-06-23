@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <body>
 
@@ -16,22 +16,26 @@
 
 <ul class="sidenav" id="navvy">
   <li><a href="index.html">Home</a></li>
-  <li class="active"><a href="about.html">About</a></li>
-  <li><a href="workingdrawings.html">Working Drawings</a></li>
-  <li><a href="conceptualdesign.html">Conceptual Design &  Presentation</a>
+  <li class="active"><a href="about.html">Profile</a></li>
+  <li><a href="workingdrawings/index.html">Working Drawings</a></li>
   <li><a href="photoshoprendering.html">Photoshop Rendering</a>
   <li><a href="sketchuprendering.html">Sketchup Rendering</a>
   <li><a href="revitrendering.html">Revit Rendering</a></li>
 </ul>
 <div class="site-cover"></div>
 <div id="two">
-  <div class="frontbox-center">
+  <div class="frontbox">
     <img src="assets/images/paul.png" style="width: 250px; height: auto;">
-  <h1 class="center nopadding">About Me</h3>
+
+  <h1 class="center nopadding">Profile</h3>
+<a href="#scrolldown1" class="no-decoration">
+  <span style="font-size: 500%; padding-top: 25px; color: grey;" class="material-icons">arrow_downward</span>
+</a>
   </div>
 </div>
 <div class="container">
 <br>
+<div id="scrolldown1"></div>
 <div class="grey-round-box">
 <p>
 
@@ -164,10 +168,21 @@
   </div>
 
 </div>
-</div>
+  <a class="no-decoration" href="workingdrawings/index.html">
 <div class="next-bar">
-  <div class="next-bar-bg"></div>
+  <div class="row">
+  <div class="col s10 m10">
+<h5>Next Up</h5>
+<h1>Working Drawings</h1>
 </div>
+<span class="material-icons" id="next-bar-arrow" >arrow_right_alt</span>
+</div>
+</div>
+</a>
+</div>
+
+
+
 <footer class="page-footer grey darken-4">
 <div class="container">
       <h2 style="text-align: center;">Get in touch</h2>
