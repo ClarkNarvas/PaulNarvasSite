@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Paul Narvas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<body>
+
+<div class="site-cover"></div>
+<a href="#" data-target="navvy" class="sidenav-trigger">☰</a>
+
+
+ <ul class="sidenav" id="navvy">
+   <li class="active"><a href="index.html">Home</a></li>
+   <li><a href="about.html">Profile</a></li>
+   <li><a href="workingdrawings/index.html">Working Drawings</a></li>
+   <li><a href="photoshoprendering.html">Photoshop Rendering</a>
+   <li><a href="sketchuprendering.html">Sketchup Rendering</a>
+   <li><a href="revitrendering.html">Revit Rendering</a></li>
+ </ul>
+
+
+<div id="one">
+  <div class="frontbox">
+<h1 id="sitetitle"><div class="font-r">PAUL </div>NARVAS<div id="smallscript">MSc, BSc (Hons)</div></h1>
+<p id="sitedescription">Architectural Technologist</p>
+  </div>
+
+</div>
+
+<div class="container">
+<h3 class="underline">Featured</h3>
+<div class="row">
+
+  <div class="col s6 m3">
+    <a class="no-decoration" href="#">
+    <div class="transparent card no-overflow">
+      <div class="p-card portfoliocard zoom">
+        <img class="p-card-img" src="assets/projectimg/testimg.png" style="width: 100%; height: auto;">
+        <div class="portfolio-overlay">
+          <h5>Sketchup Rendering</h5>
+        </div>
+      </div>
+    </div>
+  </a>
+    </div>
+
+    <div class="col s6 m3">
+      <a class="no-decoration" href="#">
+      <div class="transparent card no-overflow">
+        <div class="p-card portfoliocard zoom">
+          <img class="p-card-img" src="workingdrawings/assets/Gainsborough/thumbnail.png" style="width: 100%; height: auto;">
+          <div class="portfolio-overlay">
+            <h5>Gainsborough</h5>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col s6 m3">
+    <a class="no-decoration" href="workingdrawings/projects/merrywalks.html">
+      <div class="transparent card no-overflow">
+        <div class="p-card portfoliocard zoom">
+        <img class="p-card-img" src="workingdrawings/assets/Merrywalks/thumbnail.png" style="width: 100%; height: auto;">
+        <div class="portfolio-overlay">
+          <h5>Merrywalks</h5>
+        </div>
+      </div>
+    </div>
+  </a>
+    </div>
+
+
+
+
+</div>
+
+
+<a class="no-decoration" href="about.html">
+<div class="next-bar">
+<div class="row">
+<div class="col s10 m10">
+<h5>Next Up</h5>
+<h1>Profile</h1>
+</div>
+<span class="material-icons" id="next-bar-arrow" >arrow_right_alt</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+<!--- Footer --->
+<footer class="page-footer" id="footer">
+  <div class="row">
+    <div class="container">
+  <div class="col s5 m6" id="footer-left">
+      <h2>Get in touch</h2>
+      <a class="link-nodeco" id="footerlink"  href="mailto: paul@narvas.co.uk"><span class="material-icons" style="padding-right: 5px;">mail</span>paul@narvas.co.uk</a><br>
+      <a class="link-nodeco" id="footerlink" href="https://linkedin.com/in/paul-narvas-0840168a"><img class="social" src="assets/images/linkedin.png"></a>
+      <a class="link-nodeco" id="footerlink"><img class="social" src="assets/images/twitter.png"></a>
+      <a class="link-nodeco" id="footerlink" href="https://instagram.com/pholnarvas"><img class="social" src="assets/images/instagram.png"></a>
+    <br>
+    <br>
+  </div>
+  <div class="col s5 m6"  id="footer-right">
+<h5>More Links</h5>
+    <button onclick="window.location.href='assets/documents/CV.pdf'"><span class="material-icons" style="vertical-align: middle;">get_app</span>Download CV</button>
+    <button onclick="window.location.href='assets/documents/portfolio.pdf'"><span class="material-icons" style="vertical-align: middle;">get_app</span>Download Portfolio</button><br><br>
+    <a class="link" href="https://clarknarvas.com">Created by Clark Narvas</a>
+  </div>
+</div>
+</div>
+  </div>
+</footer>
+<!--- End of Footer --->
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  var myNav = document.querySelectorAll('.sidenav');
+  M.Sidenav.init(myNav, {});
+
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.carousel');
+  var instances = M.Carousel.init(elems, options);
+});
+
+// Or with jQuery
+
+$(document).ready(function(){
+  $('.carousel').carousel();
+});
+</script>
+</body>
+</html>
