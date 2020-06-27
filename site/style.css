@@ -21,6 +21,10 @@ body {
   #next-bar-arrow {
     display: none;
   }
+
+  #one {
+    background-attachment: scroll !important;
+  }
   .frontbox {
     margin-left: 0 !important;
     padding: 15px !important;
@@ -101,9 +105,10 @@ style.fixed-height {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-position: top;
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
