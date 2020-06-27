@@ -105,7 +105,7 @@ style.fixed-height {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
