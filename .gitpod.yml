@@ -1,3 +1,7 @@
+tasks:
+  - init: python3 -m http.server 3000
+    command: echo "this is for git"
+
 vscode:
   extensions:
     - esbenp.prettier-vscode
