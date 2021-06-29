@@ -1,4 +1,3 @@
 tasks:
   - init: python3 -m http.server 3000
-    command: echo "this is for git"
   - command: bundle install
