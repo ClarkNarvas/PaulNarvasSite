@@ -4,3 +4,6 @@ tasks:
   - name: Start Jekyll Server
     init: bundle install
     command: bundle exec jekyll serve
+ports:
+  - port: 4000
+    onOpen: open-browser
