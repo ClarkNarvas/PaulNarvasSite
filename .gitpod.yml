@@ -1,6 +1,4 @@
 tasks:
-  - name: Static Server
-    init: python3 -m http.server 3000
   - name: Start Jekyll Server
     init: bundle install
     command: bundle exec jekyll serve
