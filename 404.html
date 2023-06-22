@@ -1,149 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Paul Narvas</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel='icon' href='favicons/favicon.ico' type='image/x-icon'/ >
-  </head>
-  <body>
-    <div class="site-cover"></div>
-    <a href="#" data-target="navvy" class="sidenav-trigger">☰</a>
+---
+permalink: /404.html
+layout: default
+---
 
-    <ul class="sidenav" id="navvy">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="about.html">Profile</a></li>
-      <li><a href="https://paulnarvas.com/freelancework">Freelance Work</a></li>
-      <li><a href="workingdrawings/index.html">Working Drawings</a></li>
-      <li><a href="photoshoprendering.html">Photoshop Rendering</a></li>
-      <li><a href="sketchuprendering.html">Sketchup Rendering</a></li>
-      <li><a href="revitrendering.html">Revit Rendering</a></li>
-    </ul>
+<style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
 
-    <div class="container">
-      <div
-        class="404box"
-        style="text-align: center; padding-top: 10%; height: 80vh"
-      >
-        <img style="width: 200px; height: auto" src="assets/images/404.png" />
-        <h2>Oh no.</h2>
-        <p>This page doesn't seem to exist</p>
-        <button onclick="window.location.href='index.html'">Go Home</button>
-      </div>
-    </div>
-    <!--- Footer Woo --->
-    <footer class="page-footer" id="footer">
-      <div class="row">
-        <div class="container">
-          <div class="col s5 m6" id="footer-left">
-            <h2>Get in touch</h2>
-            <a
-              class="link-nodeco"
-              id="footerlink"
-              href="mailto: paul@narvas.co.uk"
-              ><span class="material-icons" style="padding-right: 5px"
-                >mail</span
-              >paul@narvas.co.uk</a
-            ><br />
-            <a
-              class="link-nodeco"
-              id="footerlink"
-              href="https://www.linkedin.com/in/paulnarvas/"
-              ><img class="social" src="assets/images/linkedin.png"
-            /></a>
-            <a
-              class="link-nodeco"
-              id="footerlink"
-              href="https://twitter.com/PaulNarvas"
-              ><img class="social" src="assets/images/twitter.png"
-            /></a>
-            <a
-              class="link-nodeco"
-              id="footerlink"
-              href="https://instagram.com/pholnarvas"
-              ><img class="social" src="assets/images/instagram.png"
-            /></a>
-            <br />
-            <br />
-          </div>
-          <div class="col s5 m6" id="footer-right">
-            <h5>More Links</h5>
-            <button onclick="window.location.href='assets/documents/CV.pdf'">
-              <span class="material-icons" style="vertical-align: middle"
-                >get_app</span
-              >Download CV
-            </button>
-            <button
-              onclick="window.location.href='assets/documents/portfolio.pdf'"
-            >
-              <span class="material-icons" style="vertical-align: middle"
-                >get_app</span
-              >Download Portfolio</button
-            ><br /><br />
-            <a class="link" href="https://clarknarvas.com"
-              >Created by Clark Narvas</a
-            >
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!--- End of Footer --->
+<div class="container">
+  <h1>404</h1>
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var myNav = document.querySelectorAll(".sidenav");
-        M.Sidenav.init(myNav, {});
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var elems = document.querySelectorAll(".carousel");
-        var instances = M.Carousel.init(elems, options);
-      });
-
-      // Or with jQuery
-
-      $(document).ready(function () {
-        $(".carousel").carousel();
-      });
-    </script>
-  </body>
-</html>
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>
