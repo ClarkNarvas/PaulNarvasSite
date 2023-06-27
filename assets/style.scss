@@ -1,0 +1,135 @@
+$primary: #50799F;
+$secondary: #62BB60;
+$success: #62BB60;
+$info: #56697B;
+$warning: #E4D865;
+$danger: #FF6666;
+$light: #EBEBEB;
+$dark: #181F25;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@import url("https://use.typekit.net/fyc4ksj.css");
+
+
+body {
+    font-family: 'Elza', sans-serif;
+}
+.pn-siteheader {
+    background-color: $primary;
+    height: 55px;
+}
+
+h1, h2 {
+    color: $primary;
+    font-weight: 900;
+}
+
+h3, h4, h5 {
+    color: $primary;
+    font-weight: 600;
+}
+
+.container {
+
+}
+.container-small {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 992px) {
+    .container-small {
+        max-width: 600px;
+    }
+
+} 
+
+.btn {
+    font-weight: 800;
+    border-radius: 0px;
+}
+
+/** View Elements **/
+
+
+/** Showcase Card **/
+.pn-card-showcase {
+    height: 60vh;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.00) 88.02%), url(https://clarknarvas.com/uploads/tv.png);
+    background-size: 100%;
+    background-position: center;
+    transition: ease-in-out 0.3s;
+    
+
+    /** Card content width broken**/
+
+  
+
+    .pn-sccard-content {
+        cursor: pointer;
+        height: 60vh;
+        width: 80%;
+        padding: 40px;
+        position: absolute;
+        color: white;
+
+    
+        .pn-card-top {
+            h2 {
+                font-size: 4em;
+                color: white !important;
+            }
+            height: 35%;
+        }
+    
+        .pn-card-bottom {
+            height: 35%;
+            p {
+                font-size: 1.5em;
+            }
+
+            
+
+            .row {
+                height: 100%;
+                .align-bottom {
+                    display: grid;
+                    align-items: end;
+                }
+            }
+
+            
+
+        }
+    
+        .pn-card-middle {
+            height: 35%;
+        }
+    }
+
+    .pn-showcase-highlight {
+        width: 0%;
+        height: 100%;
+        background-color: #50799fe4;
+        transition: ease-in-out 0.3s;
+    }
+
+
+}
+
+.pn-card-showcase:hover {
+    transition: ease-in-out 0.5s;
+    background-size: 120%;
+
+    .btn-light {
+        background-color: #c8c8c8;
+        border: #c8c8c8 solid 1px;
+    }
+
+    .pn-showcase-highlight {
+        width: 100%;
+        height: 100%;
+    }
+}
