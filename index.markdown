@@ -4,7 +4,8 @@
 
 layout: page
 ---
-{% include view/showcase-components/header-showcase.html %}
+{% include header/navbar.html %}
+{% include view/showcase-components/homepage-showcase-components.html %}
 
 {% include view/text-components/text-cta.html title="Hi, I'm Paul Narvas" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." cta="EXPLORE" %}
 

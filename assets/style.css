@@ -1,11 +1,11 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
-@import url("https://use.typekit.net/fyc4ksj.css");
 /*!
  * Bootstrap  v5.3.0 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@import url("https://use.typekit.net/fyc4ksj.css");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12128,14 +12128,62 @@ h3, .h3, h4, .h4, h5, .h5 {
   }
 }
 .header-showcase {
-  height: 50vh;
+  height: 80vh;
   background-color: #EBEBEB;
 }
 .header-showcase h1, .header-showcase .h1 {
   color: #50799F;
 }
 
-.navbar {
-  border-bottom: 1px solid;
-  margin-bottom: 15px;
+#paul-narvas-homepage {
+  background-image: url("/assets/branding/logobackground.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#paul-narvas-homepage h1, #paul-narvas-homepage .h1 {
+  font-size: 180%;
+  text-align: left;
+  font-weight: 500;
+  margin-top: 50px;
+}
+#paul-narvas-homepage .PAULNARVASlogo {
+  font-size: 320%;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.navigation {
+  background-color: rgba(236, 236, 236, 0.736);
+  border: 0.5px solid rgba(128, 128, 128, 0.333);
+  width: auto;
+  height: auto;
+  margin-bottom: 5vh;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+.navigation .navigation-item {
+  padding: 10px;
+  color: black;
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 110%;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: linear 0.2s;
+}
+.navigation .navigation-item:hover {
+  background-color: rgba(0, 0, 0, 0.165);
+}
+
+.navigation-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: grid;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
