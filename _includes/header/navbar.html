@@ -1,9 +1,26 @@
 
-<div class="navigation-wrapper fixed-bottom">
+<div class="navigation-wrapper">
+  <a class="navigation-button-mobile"><i class="bi bi-list"></i></a>
   <div class="navigation">
+    <a class="navigation-item" href="/index.html">Home</a>
     <a class="navigation-item">About Me</a>
-    <a class="navigation-item">My Work</a>
+    <a class="navigation-item" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">My Work</a>
     <a class="navigation-item">CV</a>
 
   </div>
 </div>
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h5>My Work</h5>
+    <a class="#">Working Drawings</a>
+    <a class="#">Freelance Work</a>
+    <a class="#">Renders</a>
+  </div>
+</div>
+

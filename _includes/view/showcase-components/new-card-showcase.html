@@ -1,0 +1,23 @@
+<div class="container mt-5 mb-5">
+    <div class="pn-card-showcase">
+        <div class="row">
+            <div class="col-md-6 equal pn-card-showcase-image">
+                <img src="/assets/branding/logobackground.png">
+            </div>
+            <div class="col-md-6 equal pn-card-showcase-content d-grid">
+                <div class="content">
+
+                    {% if include.maintag %}
+                    <div class="mini-info">
+                        <span class="info-tag">{{include.maintag}}</span>
+                        <span class="info-tag">{{include.secondtag}}</span>
+                    </div>
+                    {% endif %}
+                    <h2>{{include.title}}</h2>
+                    <p>{{include.description}}</p>
+                    <a class="btn btn-outline-primary" href="{{include.link}}">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
