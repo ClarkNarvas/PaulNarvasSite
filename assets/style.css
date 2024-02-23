@@ -12167,7 +12167,9 @@ h3, .h3, h4, .h4, h5, .h5 {
 }
 
 .image-header-showcase {
-  background-color: #EBEBEB;
+  background-image: url(/assets/branding/pnplaceholder.png);
+  background-size: cover;
+  background-position: bottom;
   height: 40vh;
   overflow: hidden;
 }

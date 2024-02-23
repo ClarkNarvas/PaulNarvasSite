@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+local_backend: true
+
+  # This line should *not* be indented
+publish_mode: editorial_workflow
+media_folder: "/uploads" # Media files will be stored in the repo under images/uploads
+
+collections:
+  - name: "Projects" # Used in routes, e.g., /admin/collections/blog
+    label: "Projects" # Used in the UI
+    folder: "_projects" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "project" }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Date", name: "date", widget: "date"}
+
+  - name: 'Configuration'
+    label: '⚙️ Configuration'
+    editor:
+      preview: false
+    files:
+      - label: 'Site Details'
+        name: 'site-details'
+        file: '_data/site-md.yml'
+        fields:
+          - {label: "Title", name: "site-title", widget: "string"}
+          - {label: "Short Title", name: "short-title", widget: "string"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Site Url (e.g. labour.org.uk)", name: "site-url", widget: "string"}
+          - {label: "Site Imprint", name: "imprint", widget: "string"}
+          - {label: "Site Thumbnail Image", name: "image", widget: "image"}
