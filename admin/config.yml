@@ -17,10 +17,16 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "project" }
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+        - { label: "Working Drawings", value: "WorkingDrawings" }
+        - { label: "Renders", value: "Renders" }
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - {label: "Description", name: "description", widget: "string", required: false}
       - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Category", name: "category", widget: "string"}
-      - {label: "Date", name: "date", widget: "date"}
 
   - name: 'Configuration'
     label: '⚙️ Configuration'
@@ -34,6 +40,6 @@ collections:
           - {label: "Title", name: "site-title", widget: "string"}
           - {label: "Short Title", name: "short-title", widget: "string"}
           - {label: "Description", name: "description", widget: "string"}
-          - {label: "Site Url (e.g. labour.org.uk)", name: "site-url", widget: "string"}
+          - {label: "Site Url", name: "site-url", widget: "string"}
           - {label: "Site Imprint", name: "imprint", widget: "string"}
           - {label: "Site Thumbnail Image", name: "image", widget: "image"}
