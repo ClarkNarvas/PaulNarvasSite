@@ -12074,11 +12074,11 @@ h3, .h3, h4, .h4, h5, .h5 {
 .navigation-wrapper {
   position: fixed;
   top: 90vh;
-  z-index: 50;
+  z-index: 100000000000;
 }
 
 .navigation {
-  background-color: rgba(236, 236, 236, 0.736);
+  background-color: rgba(255, 255, 255, 0.736);
   border: 0.5px solid rgba(128, 128, 128, 0.333);
   width: auto;
   height: auto;
@@ -12184,4 +12184,92 @@ h3, .h3, h4, .h4, h5, .h5 {
   border-bottom: 5px solid #50799F;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.imgcard {
+  transition: 0.3s ease-in-out;
+}
+.imgcard .img-imgcard {
+  background-image: url("/assets/branding/pnplaceholder1.png");
+  background-size: 100%;
+  background-position: center;
+  display: grid;
+  z-index: -1;
+  overflow: none;
+}
+.imgcard .img-imgcard img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+.imgcard .content-imgcard {
+  height: auto;
+  padding-top: 20px;
+  width: 80%;
+  background-color: white;
+  margin-top: -50px;
+  padding-right: 20px;
+  z-index: 500 !important;
+  position: relative;
+  transition: 0.3s ease-in-out !important;
+}
+.imgcard .content-imgcard span {
+  display: block;
+}
+.imgcard .content-imgcard .card-title {
+  font-size: 140%;
+  font-family: "elza", sans-serif;
+  font-weight: 700;
+  color: #50799F;
+  border-bottom: 2px #50799F solid;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.imgcard .content-imgcard .card-miscinfo {
+  font-size: 80%;
+  color: rgb(177, 177, 177);
+}
+.imgcard .content-imgcard .card-CTA {
+  font-size: 80%;
+  padding-top: 15px;
+  color: #50799F;
+  text-decoration-line: underline;
+  transition: 0.3s ease-in-out;
+}
+.imgcard .content-imgcard .card-CTA .bi-arrow-right {
+  transition: 0.3s ease-in-out;
+}
+
+.imgcard:hover .content-imgcard {
+  transform: translateY(-20px);
+}
+
+.imgcard:active {
+  transition: 0.2s ease-in-out;
+  transform: scale(0.8);
+}
+
+.container-narrow {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  width: auto;
+}
+
+.text-header-focus {
+  height: 50vh;
+  display: flex;
+}
+.text-header-focus .text-header-focus-content {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-photo {
+  border-radius: 900px;
 }/*# sourceMappingURL=style.css.map */

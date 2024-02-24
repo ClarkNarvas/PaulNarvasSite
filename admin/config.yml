@@ -43,3 +43,21 @@ collections:
           - {label: "Site Url", name: "site-url", widget: "string"}
           - {label: "Site Imprint", name: "imprint", widget: "string"}
           - {label: "Site Thumbnail Image", name: "image", widget: "image"}
+      - label: 'Profile Page'
+        name: 'profile'
+        file: '_data/profile.yml'
+        fields:
+          - label: 'Job Experience'
+            name: 'jobexperience'
+            widget: 'list'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Years, name: years, widget: string }
+              - { label: Description, name: description, widget: string }
+          - label: 'Education'
+            name: 'educationexperience'
+            widget: 'list'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Years, name: years, widget: string }
+              - { label: Description, name: description, widget: string, required: false}
