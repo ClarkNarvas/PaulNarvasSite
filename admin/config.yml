@@ -28,6 +28,12 @@ collections:
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Description", name: "description", widget: "string", required: false}
       - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - label: "Media PDFs"
+        name: "pdf"
+        widget: "file"
+        media_library:
+          config:
+            multiple: false
 
   - name: 'Configuration'
     label: '⚙️ Configuration'
@@ -39,10 +45,7 @@ collections:
         file: '_data/site-md.yml'
         fields:
           - {label: "Title", name: "site-title", widget: "string"}
-          - {label: "Short Title", name: "short-title", widget: "string"}
           - {label: "Description", name: "description", widget: "string"}
-          - {label: "Site Url", name: "site-url", widget: "string"}
-          - {label: "Site Imprint", name: "imprint", widget: "string"}
           - {label: "Site Thumbnail Image", name: "image", widget: "image"}
       - label: 'Profile Page'
         name: 'profile'
