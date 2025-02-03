@@ -2,8 +2,8 @@
 
     <div class="imgcard" style="cursor: pointer;" onClick="location.href='{{post.url}}'">
         <div class="img-imgcard ratio ratio-16x9">
-            {% if post.img.size > 1 %}
-            <img class="img-loadplaceholder" src="{{post.img}}">
+            {% if post.image.size > 1 %}
+            <img class="img-loadplaceholder {% if post.category == 'WorkingDrawings' %}border{%endif%}" src="{{post.image}}">
             {%endif%}
         </div>
 

@@ -2,7 +2,7 @@
 
 
 
-$primary: #50799F;
+$primary: #515c69;
 $secondary: #62BB60;
 $success: #62BB60;
 $info: #56697B;
@@ -18,18 +18,21 @@ $dark: #181F25;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
-@import url("https://use.typekit.net/fyc4ksj.css");
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
 
 
 body {
-    font-family: 'Elza', sans-serif;
+    font-family: 'Instrument Sans', sans-serif;
 }
+
 .pn-siteheader {
     background-color: $primary;
     height: 55px;
 }
 
 h1, h2 {
+    font-family: 'Instrument Sans', sans-serif;
     color: $primary;
     font-weight: 600;
 }
