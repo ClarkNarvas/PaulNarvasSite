@@ -12024,7 +12024,6 @@ h3, .h3, h4, .h4, h5, .h5 {
 }
 .btn {
   font-weight: 800;
-  border-radius: 0px;
 }
 
 /** View Elements **/
@@ -12128,7 +12127,7 @@ h3, .h3, h4, .h4, h5, .h5 {
   top: 0;
   z-index: 1000000000;
   animation-name: page-fade;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -12275,4 +12274,37 @@ h3, .h3, h4, .h4, h5, .h5 {
 
 .profile-photo {
   border-radius: 900px;
+}
+
+.pdf-view-side {
+  height: 100vh;
+}
+
+.body-dark {
+  background-color: #1b1b1e;
+  color: #EBEBEB;
+}
+.body-dark h1, .body-dark .h1, .body-dark h2, .body-dark .h2, .body-dark h3, .body-dark .h3, .body-dark h4, .body-dark .h4, .body-dark h5, .body-dark .h5 {
+  color: #EBEBEB !important;
+}
+.body-dark span {
+  opacity: 0.5;
+  color: #EBEBEB;
+}
+.body-dark #page-fade {
+  background-color: #1b1b1e;
+}
+
+.max-100vh {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.project-info-side {
+  height: 100vh;
+  display: grid;
+}
+.project-info-side .project-info {
+  margin-top: auto;
+  margin-bottom: auto;
 }/*# sourceMappingURL=style.css.map */

@@ -11,6 +11,6 @@
 
   <script src='/assets/pdfjs/lib/webviewer.min.js'></script>
 
-  <body>
+  <body {% if page.layout == "project" %} class="body-dark max-100vh" {% endif %}>
     {% include page-fade.html %}
     {% include header/navbar.html %}
