@@ -5,5 +5,5 @@ description: 'Dixon Dawson Chartered Architects have received unanimous approval
 category: WorkingDrawings
 pdf: '/uploads/waverly.pdf'
 date: 2023-03-05 11:12:38 +0000
-image: 
+image: /uploads/Waverly-thumb.png
 ---

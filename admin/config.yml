@@ -1,8 +1,8 @@
+local_backend: true
 backend:
   name: git-gateway
   branch: PN2023 # Branch to update (optional; defaults to master)
 
-local_backend: true
 
   # This line should *not* be indented
 publish_mode: editorial_workflow

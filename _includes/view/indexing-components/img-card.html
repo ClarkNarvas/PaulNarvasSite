@@ -10,7 +10,7 @@
         <div class="content-imgcard">
             <span class="card-title">{{post.title}}</span>
             <span class="card-description">{{post.description}}</span>
-            <span class="card-miscinfo">{{post.date | date: "%b %Y"}} | {{post.skills}} {% if post.category %} {{post.category}} {%endif%}</span>
+            <span class="card-miscinfo">{{ post.date | date: "%Y" }} | {{post.skills}} {% if post.category %} {{post.category}} {%endif%}</span>
             <span class="card-CTA">Learn more about project <i class="bi bi-arrow-right"></i></span> 
         </div>
     </div>
