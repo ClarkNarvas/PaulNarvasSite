@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/JsonLd";
 import { ProjectViewer } from "@/components/ProjectViewer";
 import { getProject, projects } from "@/data/projects";
+import { createPageMetadata } from "@/lib/site";
+import { createProjectStructuredData } from "@/lib/structuredData";
 
 type ProjectPageProps = { params: Promise<{ slug: string }> };
 
@@ -13,11 +16,12 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return {};
-  return {
+  return createPageMetadata({
     title: project.title,
     description: project.summary,
-    openGraph: { title: `${project.title} — Paul Narvas`, description: project.summary }
-  };
+    path: `/work/${project.slug}`,
+    type: "article"
+  });
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
@@ -27,5 +31,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const index = projects.findIndex((item) => item.slug === project.slug);
   const next = projects[(index + 1) % projects.length];
 
-  return <ProjectViewer project={project} next={next} />;
+  return (
+    <>
+      <JsonLd data={createProjectStructuredData(project)} />
+      <ProjectViewer project={project} next={next} />
+    </>
+  );
 }

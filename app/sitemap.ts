@@ -1,13 +1,22 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
+import { absoluteUrl, SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://paulnarvas.com";
   return [
-    { url: base, changeFrequency: "monthly", priority: 1 },
-    { url: `${base}/work`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/profile`, changeFrequency: "yearly", priority: 0.7 },
-    { url: `${base}/contact`, changeFrequency: "yearly", priority: 0.6 },
-    ...projects.map((project) => ({ url: `${base}/work/${project.slug}`, changeFrequency: "yearly" as const, priority: 0.7 }))
+    {
+      url: SITE_URL,
+      changeFrequency: "monthly",
+      priority: 1,
+      images: projects.map((project) => absoluteUrl(project.image.src))
+    },
+    { url: absoluteUrl("/profile"), changeFrequency: "yearly", priority: 0.7, images: [absoluteUrl("/media/paul-portrait.png")] },
+    { url: absoluteUrl("/contact"), changeFrequency: "yearly", priority: 0.6 },
+    ...projects.map((project) => ({
+      url: absoluteUrl(`/work/${project.slug}`),
+      changeFrequency: "yearly" as const,
+      priority: 0.7,
+      images: [project.image, ...(project.gallery ?? [])].map((media) => absoluteUrl(media.src))
+    }))
   ];
 }

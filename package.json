@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check": "tsc --noEmit",
+    "check": "tsc --noEmit && npm run check:content",
+    "check:content": "node scripts/validate-content.mjs",
     "remotion:studio": "remotion studio remotion/index.ts",
     "render:hero": "remotion render remotion/index.ts ArchitecturalHero out/paul-narvas-hero.mp4"
   },
