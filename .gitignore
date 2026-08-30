@@ -1,0 +1,19 @@
+node_modules/
+.next/
+out/
+output/
+uploads/
+assets/branding/
+assets/source-pdfs/
+
+# Runtime-managed install metadata; this project uses package-lock.json.
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+.DS_Store
+*.log
+tsconfig.tsbuildinfo
+
+.env
+.env.*
+!.env.example

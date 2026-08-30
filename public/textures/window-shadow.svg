@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1400" viewBox="0 0 1800 1400" fill="none">
+  <defs>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="42" />
+    </filter>
+    <linearGradient id="falloff" x1="300" y1="180" x2="1460" y2="1250" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#354047" stop-opacity=".48" />
+      <stop offset=".58" stop-color="#4a555d" stop-opacity=".31" />
+      <stop offset="1" stop-color="#5b656b" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="edge" x1="130" y1="40" x2="1350" y2="1260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#263139" stop-opacity=".56" />
+      <stop offset="1" stop-color="#465159" stop-opacity=".08" />
+    </linearGradient>
+  </defs>
+  <g filter="url(#soft)" transform="rotate(-8 900 700)">
+    <path d="M-180 180H1530L1870 1510H130L-180 180Z" fill="url(#falloff)" />
+    <path d="M170 -170H315L650 1500H505L170 -170Z" fill="url(#edge)" />
+    <path d="M835 -170H975L1310 1500H1170L835 -170Z" fill="url(#edge)" opacity=".82" />
+    <path d="M-110 470L1710 615L1750 760L-70 615L-110 470Z" fill="url(#edge)" opacity=".74" />
+    <path d="M40 1040L1790 1180L1825 1300L75 1160L40 1040Z" fill="url(#edge)" opacity=".36" />
+  </g>
+</svg>
