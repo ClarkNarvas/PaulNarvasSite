@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     description: "Selected architecture, technical design and visualisation work.",
     url: "https://paulnarvas.com",
     siteName: "Paul Narvas",
-    images: [{ url: "/media/Waverly-thumb.png", width: 881, height: 573 }],
     type: "website"
-  }
+  },
+  twitter: { card: "summary_large_image" }
 };
 
 export const viewport: Viewport = {
