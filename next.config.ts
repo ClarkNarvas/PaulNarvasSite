@@ -1,9 +1,29 @@
 import type { NextConfig } from "next";
 
+const imageNoIndexHeader = [{ key: "X-Robots-Tag", value: "noindex" }];
+const indexablePersonalMedia = [
+  "/media/paul-portrait.png",
+  "/media/paul-studio.jpg",
+  "/media/paul.png"
+];
+
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["renaissance.tailb913b2.ts.net"],
   images: {
     formats: ["image/avif", "image/webp"],
+  },
+  async headers() {
+    return [
+      // Project media stays available to visitors while its original and
+      // Next.js-optimised URLs are excluded from image search indexes.
+      { source: "/documents/:path*", headers: imageNoIndexHeader },
+      { source: "/media/:path*", headers: imageNoIndexHeader },
+      { source: "/_next/image", headers: imageNoIndexHeader },
+      ...indexablePersonalMedia.map((source) => ({
+        source,
+        headers: [{ key: "X-Robots-Tag", value: "all" }]
+      }))
+    ];
   },
   async redirects() {
     return [

@@ -20,7 +20,8 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     title: project.title,
     description: project.summary,
     path: `/work/${project.slug}`,
-    type: "article"
+    type: "article",
+    excludeImagesFromSearch: true
   });
 }
 

@@ -18,13 +18,15 @@ type PageMetadataOptions = {
   description: string;
   path: string;
   type?: "website" | "article";
+  excludeImagesFromSearch?: boolean;
 };
 
 export function createPageMetadata({
   title,
   description,
   path,
-  type = "website"
+  type = "website",
+  excludeImagesFromSearch = false
 }: PageMetadataOptions): Metadata {
   const fullTitle = `${title} — ${SITE_NAME}`;
   const url = absoluteUrl(path);
@@ -45,6 +47,15 @@ export function createPageMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description
-    }
+    },
+    ...(excludeImagesFromSearch
+      ? {
+          robots: {
+            index: true,
+            follow: true,
+            noimageindex: true
+          }
+        }
+      : {})
   };
 }

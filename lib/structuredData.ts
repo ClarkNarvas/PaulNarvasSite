@@ -72,7 +72,6 @@ export const profileStructuredData = {
 
 export function createProjectStructuredData(project: Project) {
   const url = absoluteUrl(`/work/${project.slug}`);
-  const media = [project.image, ...(project.gallery ?? [])];
 
   return {
     "@context": "https://schema.org",
@@ -96,11 +95,6 @@ export function createProjectStructuredData(project: Project) {
           "@type": "Place",
           name: project.location
         }
-      : undefined,
-    image: media.map((item) => ({
-      "@type": "ImageObject",
-      contentUrl: absoluteUrl(item.src),
-      caption: item.caption ?? item.alt
-    }))
+      : undefined
   };
 }
